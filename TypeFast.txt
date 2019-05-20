@@ -1,0 +1,24 @@
+Changes Since Version 1.0:
+
+* Game Speedup routines are totally changed. Parameters are better defined 
+so that the game's difficulty increases more gradually and more evenly.
+(Every 100 points, the dropping speed increases, but the number of active 
+words gets halved. Every 20 words, number of active words increases by 
+one.)
+
+* Case Respect is added, for those who want maximum accuracy. If enabled, 
+the words must be typed exactly as they appear.
+
+* Duplicate words are not permitted on the screen, reducing confusion.
+
+* Max. number of words is decreased to 30, instead of 50. 50 was too much, 
+and was never reached.
+
+* Source is cleaned up enough to be included in the package. Read it at 
+your own risk :)
+
+Take care, and happy typing..
+   -turgut kalfaoglu
+    July 1992, Paris.
+
+

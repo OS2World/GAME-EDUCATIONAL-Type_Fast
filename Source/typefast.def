@@ -1,0 +1,14 @@
+; Typefast Module Definition File:
+
+NAME    typefast WINDOWAPI
+
+DESCRIPTION 'TypeFast (C)1992 Turgut Kalfaoglu'
+
+DATA    MULTIPLE
+
+STACKSIZE   8192
+HEAPSIZE    1024
+
+PROTMODE
+
+
