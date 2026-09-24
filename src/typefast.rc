@@ -1,0 +1,82 @@
+#include <os2.h>
+#include "typefast.h"
+
+POINTER  ID_RESOURCE typefast.ico
+
+MENU ID_RESOURCE PRELOAD
+BEGIN
+  SUBMENU "~Game",    IDM_SUB_GAME
+  BEGIN
+    MENUITEM "~New Game\tCtrl+N",  IDM_NEWGAME,  MIS_TEXT
+    MENUITEM "~Pause\tCtrl+P",     IDM_PAUSE,    MIS_TEXT
+    MENUITEM "~Quit Game\tCtrl+Q", IDM_QUITGAME, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "E~xit\tCtrl+X",      IDM_EXIT,     MIS_TEXT
+  END
+  SUBMENU "~Options", IDM_SUB_OPTIONS
+  BEGIN
+    SUBMENU "~Difficulty",              IDM_SUB_DETAIL
+    BEGIN
+      MENUITEM "~Easy",   IDM_EASY,   MIS_TEXT, MIA_CHECKED
+      MENUITEM "~Medium", IDM_MEDIUM, MIS_TEXT
+      MENUITEM "~Hard",   IDM_HARD,   MIS_TEXT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "~Sound\tCtrl+S",           IDM_SOUND,      MIS_TEXT, MIA_CHECKED
+    MENUITEM "Respect ~Case\tCtrl+C",    IDM_CASE,       MIS_TEXT
+    MENUITEM SEPARATOR
+    SUBMENU "~Language",                 IDM_SUB_LANG
+    BEGIN
+      MENUITEM "English",    IDM_LANG_EN, MIS_TEXT, MIA_CHECKED
+      MENUITEM "Espanol",    IDM_LANG_ES, MIS_TEXT
+      MENUITEM "Nederlands", IDM_LANG_NL, MIS_TEXT
+      MENUITEM "Deutsch",    IDM_LANG_DE, MIS_TEXT
+      MENUITEM "Francais",   IDM_LANG_FR, MIS_TEXT
+      MENUITEM "Italiano",   IDM_LANG_IT, MIS_TEXT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "~Background Run\tCtrl+B",  IDM_BACKGRND,   MIS_TEXT
+    MENUITEM "~Frame Controls\tCtrl+F",  IDM_FRAME,      MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Save settings on exit",   IDM_SAVEONEXIT, MIS_TEXT
+  END
+  SUBMENU "~Help",    IDM_SUB_HELP
+  BEGIN
+    MENUITEM "~About TypeFast...", IDM_ABOUT, MIS_TEXT
+  END
+END
+
+ACCELTABLE ID_RESOURCE PRELOAD
+BEGIN
+  "n", IDM_NEWGAME,  CONTROL
+  "N", IDM_NEWGAME,  CONTROL
+  "p", IDM_PAUSE,    CONTROL
+  "P", IDM_PAUSE,    CONTROL
+  "q", IDM_QUITGAME, CONTROL
+  "Q", IDM_QUITGAME, CONTROL
+  "x", IDM_EXIT,     CONTROL
+  "X", IDM_EXIT,     CONTROL
+  "b", IDM_BACKGRND, CONTROL
+  "B", IDM_BACKGRND, CONTROL
+  "f", IDM_FRAME,    CONTROL
+  "F", IDM_FRAME,    CONTROL
+  "s", IDM_SOUND,    CONTROL
+  "S", IDM_SOUND,    CONTROL
+  "c", IDM_CASE,     CONTROL
+  "C", IDM_CASE,     CONTROL
+  VK_F3, IDM_EXIT,   VIRTUALKEY
+END
+
+DLGTEMPLATE IDD_ABOUT LOADONCALL MOVEABLE
+BEGIN
+   DIALOG "About TypeFast", IDD_ABOUT, 32, 32, 240, 115
+   BEGIN
+      CTEXT "TypeFast for OS/2",          -1, 10, 95, 220, 8
+      CTEXT "Version 1.2",                -1, 10, 82, 220, 8
+      CTEXT "OpenWatcom Build",           -1, 10, 69, 220, 8
+      CTEXT "(C) 1992, Turgut Kalfaoglu", -1, 10, 56, 220, 8
+      CTEXT "(C) 2026, OS2World",         -1, 10, 43, 220, 8
+      CTEXT "GNU GPL v3",                 -1, 10, 30, 220, 8
+      DEFPUSHBUTTON "Close", DID_OK,      98,  8, 44, 14
+   END
+END

@@ -1,0 +1,6 @@
+; TypeFast Module Definition File
+
+NAME TYPEFAST WINDOWAPI
+
+STACKSIZE 65536
+HEAPSIZE  4096

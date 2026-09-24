@@ -1,0 +1,32 @@
+TypeFast Changelog
+==================
+
+Version 1.2 (OpenWatcom Build) - 2026
+  - Ported to OpenWatcom 32-bit PM compiler for OS/2 and ArcaOS
+  - Replaced IBM C/SET specific pragmas with standard OW code
+  - Added standard OS2World game menu structure (Game / Options / Help)
+  - Added proper About dialog (DLGTEMPLATE, not WinMessageBox)
+  - Added settings persistence via TYPEFAST.CFG binary file
+  - Added Language submenu (English / Espanol / Nederlands / Deutsch /
+    Francais / Italiano)
+  - Added Frame Controls toggle (Ctrl+F) to hide/show title bar and menu
+  - Added Background Run toggle (Ctrl+B)
+  - Added explicit Pause (Ctrl+P) and Quit Game (Ctrl+Q)
+  - Added mandatory keyboard shortcuts: Ctrl+N/P/Q/X/B/F
+  - Fixed F3 and Ctrl+X for exit
+  - Window now starts invisible, sized 1024x768, centered on screen
+  - Fixed difficulty/sound/case settings to survive New Game
+  - Separated difficulty menu IDs from timer interval values
+  - Added BLDLEVEL marker string
+  - Module definition: removed DESCRIPTION, raised STACKSIZE to 65536,
+    HEAPSIZE to 4096
+
+Version 1.1 - July 1992 (Original by Turgut Kalfaoglu)
+  - Game speedup routines improved; difficulty increases more gradually
+  - Added Case Respect mode
+  - Duplicate words no longer appear simultaneously on screen
+  - Maximum active words reduced to 30
+  - Source code included in package
+
+Version 1.0 - 1992 (Original by Turgut Kalfaoglu)
+  - Initial release

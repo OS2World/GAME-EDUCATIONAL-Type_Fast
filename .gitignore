@@ -1,0 +1,7 @@
+bin/*.exe
+bin/*.map
+src/*.obj
+src/*.res
+src/*.map
+*.log
+*.bak
